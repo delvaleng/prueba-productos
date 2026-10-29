@@ -18,7 +18,15 @@ cd prueba-productos
 composer install
 cp .env.example .env
 php artisan key:generate
-# configurar DB_* en .env y crear la base prueba_productos
+```
+
+## Creacion de la base de datos:
+```sql
+CREATE DATABASE prueba_productos CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+## Creacion de tablas y datos
+``` bash
 php artisan migrate --seed
 php artisan serve
 ```
